@@ -15,6 +15,7 @@ export class PrismaLambdaStack extends cdk.Stack {
       handler: 'handler',
       entry: lambdaFn,
       timeout: cdk.Duration.seconds(10),
+      memorySize: 1024,
       environment: {
         DB_URL: process.env.DB_URL || '',
       },
@@ -32,6 +33,7 @@ export class PrismaLambdaStack extends cdk.Stack {
               `cd ${outputDir}`,
               `yarn prisma generate`,
               `rm -rf node_modules/@prisma/engines`,
+              `rm -rf node_modules/@prisma/client/node_modules node_modules/.bin node_modules/prisma`,
             ]
           },
         },
