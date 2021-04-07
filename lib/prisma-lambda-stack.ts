@@ -22,13 +22,13 @@ export class PrismaLambdaStack extends cdk.Stack {
       bundling: {
         nodeModules: ['@prisma/client', 'prisma'],
         commandHooks: {
-          beforeBundling(inputDir: string, outputDir: string): string[] {
+          beforeBundling(_inputDir: string, _outputDir: string) {
             return []
           },
-          beforeInstall(inputDir: string, outputDir: string) {
+          beforeInstall(_inputDir: string, outputDir: string) {
             return [`cp -R ../prisma ${outputDir}/`]
           },
-          afterBundling(inputDir: string, outputDir: string): string[] {
+          afterBundling(_inputDir: string, outputDir: string) {
             return [
               `cd ${outputDir}`,
               `yarn prisma generate`,
