@@ -10,6 +10,10 @@
     {
       "packagePatterns": [".*aws-cdk"],
       "groupName": "cdk deps"
+    },
+    {
+      "packagePatterns": ["^jest", "ts-jest"],
+      "groupName": "test-utils"
     }
   ]
 }
