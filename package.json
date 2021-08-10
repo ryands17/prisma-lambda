@@ -9,8 +9,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "dotenv -- cdk",
-    "prepare": "husky install"
+    "cdk": "dotenv -- cdk"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.114.0",

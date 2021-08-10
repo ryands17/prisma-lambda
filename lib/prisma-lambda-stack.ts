@@ -17,7 +17,7 @@ export class PrismaLambdaStack extends cdk.Stack {
       timeout: cdk.Duration.seconds(10),
       memorySize: 1024,
       environment: {
-        DB_URL: process.env.DB_URL || '',
+        DB_URL: process.env.DB_URL,
       },
       bundling: {
         nodeModules: ['@prisma/client', 'prisma'],
@@ -25,8 +25,8 @@ export class PrismaLambdaStack extends cdk.Stack {
           beforeBundling(_inputDir: string, _outputDir: string) {
             return []
           },
-          beforeInstall(_inputDir: string, outputDir: string) {
-            return [`cp -R ../prisma ${outputDir}/`]
+          beforeInstall(inputDir: string, outputDir: string) {
+            return [`cp -R ${inputDir}/prisma ${outputDir}/`]
           },
           afterBundling(_inputDir: string, outputDir: string) {
             return [
