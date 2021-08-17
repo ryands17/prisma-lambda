@@ -12,10 +12,10 @@
     "cdk": "dotenv -- cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.118.0",
+    "@aws-cdk/assert": "1.119.0",
     "@types/jest": "27.0.1",
     "@types/node": "15.12.2",
-    "aws-cdk": "1.118.0",
+    "aws-cdk": "1.119.0",
     "dotenv-cli": "4.0.0",
     "esbuild": "0.12.20",
     "husky": "7.0.1",
@@ -28,8 +28,8 @@
     "typescript": "4.3.5"
   },
   "dependencies": {
-    "@aws-cdk/aws-lambda-nodejs": "1.118.0",
-    "@aws-cdk/core": "1.118.0",
+    "@aws-cdk/aws-lambda-nodejs": "1.119.0",
+    "@aws-cdk/core": "1.119.0",
     "@prisma/client": "2.29.1",
     "source-map-support": "0.5.19"
   },
