@@ -1,3 +1,4 @@
+import { ProxyHandler } from 'aws-lambda'
 import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient({
@@ -8,8 +9,14 @@ const prisma = new PrismaClient({
   },
 })
 
-export const handler = async (event: any) => {
+export const handler: ProxyHandler = async () => {
   let users = await prisma.user.findMany()
-  console.log(users)
-  return 'done'
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ users }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }
 }
