@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Prisma + Lambda</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/league.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- talk slide -->
+        <section><h1>Deploying Prisma on Lambda using the CDK</h1></section>
+
+        <!-- intro -->
+        <section>
+          <h2>Hello everyone 👋</h2>
+          <div>I'm a Developer Success Engineer @ Prisma</div>
+        </section>
+
+        <!-- topics to be covered -->
+        <section>
+          <h2>Topics for today</h2>
+          <ul>
+            <li class="fragment fade-up">Why Serverless</li>
+            <li class="fragment fade-up">
+              Code walkthrough and deploying the app
+            </li>
+            <li class="fragment fade-up">Takeaways</li>
+          </ul>
+        </section>
+
+        <!-- A bit about the previous talk -->
+        <section>
+          <h2>Why Serverless</h2>
+          <ul>
+            <li class="fragment fade-up">
+              A way to run your code without manually provisioning servers
+            </li>
+            <li class="fragment fade-up">
+              Easier deployment as you're shipping code and not managing servers
+            </li>
+            <li class="fragment fade-up">Scaling is easier</li>
+            <li class="fragment fade-up">Secure by default</li>
+          </ul>
+        </section>
+
+        <!-- What is Prisma -->
+        <!-- <section>
+          <section>
+            <h2>Enter Prisma 😎</h2>
+            <ul>
+              <li class="fragment fade-up">
+                An ORM for interacting with your database
+              </li>
+              <li class="fragment fade-up">
+                Easy to define models in a schema format
+              </li>
+              <li class="fragment fade-up">
+                Get the fields exactly as required from the database due to
+                type-safety
+              </li>
+              <li class="fragment fade-up">
+                Currently supports Node.js and Go runtimes
+              </li>
+            </ul>
+          </section>
+
+          <section data-auto-animate>
+            <h2>Defining your schema</h2>
+            <pre
+              data-id="code-animation"
+              class="groovy"
+            ><code class="hljs" data-trim data-line-numbers style="max-height: 450px;"><script type="text/template">
+                model User {
+                  id      Int      @default(autoincrement()) @id
+                  email   String   @unique
+                  name    String?
+                  posts   Post[]
+                  createdAt DateTime @default(now())
+                  updatedAt DateTime @updatedAt
+                }
+
+                model Post {
+                  id        Int      @default(autoincrement()) @id
+                  title     String
+                  content   String?
+                  published Boolean  @default(false)
+                  author    User     @relation(fields: [authorId], references: [id])
+                  authorId  Int
+                }
+            </script></code>
+            </pre>
+          </section>
+        </section> -->
+
+        <!-- demo -->
+        <section>
+          <h2>Walkthrough ⚒️</h2>
+        </section>
+
+        <!-- points to note while deploying Prisma on Lambda -->
+        <section>
+          <section>
+            <h2>Takeaways ✏️</h2>
+            <ul>
+              <li class="fragment fade-up">
+                Only bundle the <em>Query Engine</em> for Lambda's OS
+              </li>
+              <li class="fragment fade-up">
+                Always initialize <code>PrismaClient</code> outside the Lambda
+                handler
+              </li>
+              <li class="fragment fade-up">
+                Load test your application before deploying to production.
+              </li>
+              <li class="fragment fade-up">
+                Use a connection pooler like <strong>PgBouncer</strong> if
+                required
+              </li>
+              <li class="fragment fade-up">
+                Watch out for Prisma's <strong>Data Platform</strong> (future)
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Resources</h2>
+            <ul>
+              <li>
+                <a
+                  href="https://www.prisma.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Prisma Docs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/ryands17/prisma-lambda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Repository (Code + Slides)</a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- the end -->
+        <section>
+          <h1>Thank you :)</h1>
+          <h3>Reach me @</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/ryan-dsouza-880522125/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/ryands1701"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/ryands17/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://dev.to/ryands17"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Dev.to</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <!-- <script src="plugin/markdown/markdown.js"></script> -->
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealHighlight, RevealNotes],
+      })
+    </script>
+  </body>
+</html>
