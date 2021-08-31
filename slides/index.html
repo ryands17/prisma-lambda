@@ -37,6 +37,7 @@
           <h2>Topics for today</h2>
           <ul>
             <li class="fragment fade-up">Why Serverless</li>
+            <li class="fragment fade-up">Introduction to Prisma</li>
             <li class="fragment fade-up">
               Code walkthrough and deploying the app
             </li>
@@ -60,7 +61,7 @@
         </section>
 
         <!-- What is Prisma -->
-        <!-- <section>
+        <section>
           <section>
             <h2>Enter Prisma 😎</h2>
             <ul>
@@ -68,14 +69,15 @@
                 An ORM for interacting with your database
               </li>
               <li class="fragment fade-up">
-                Easy to define models in a schema format
+                Easy to define models using a schema language
               </li>
               <li class="fragment fade-up">
-                Get the fields exactly as required from the database due to
-                type-safety
+                Get the fields exactly as required from the database thanks to
+                built-in type-safety
               </li>
               <li class="fragment fade-up">
-                Currently supports Node.js and Go runtimes
+                Perform imperative migrations (Migrate) and interact with data
+                via an easy to use UI (Studio)
               </li>
             </ul>
           </section>
@@ -84,8 +86,7 @@
             <h2>Defining your schema</h2>
             <pre
               data-id="code-animation"
-              class="groovy"
-            ><code class="hljs" data-trim data-line-numbers style="max-height: 450px;"><script type="text/template">
+            ><code class="hljs js" data-trim data-line-numbers="1-8|10-14|15-16" style="min-height: 460px; min-width: 980px;"><script type="text/template">
                 model User {
                   id      Int      @default(autoincrement()) @id
                   email   String   @unique
@@ -106,7 +107,7 @@
             </script></code>
             </pre>
           </section>
-        </section> -->
+        </section>
 
         <!-- demo -->
         <section>
@@ -133,7 +134,12 @@
                 required
               </li>
               <li class="fragment fade-up">
-                Watch out for Prisma's <strong>Data Platform</strong> (future)
+                Use a Lambda Layer for faster deployments if multiple functions
+                reference Prisma
+              </li>
+              <li class="fragment fade-up">
+                Watch out for Prisma's <strong>Data Proxy</strong> for
+                Serverless
               </li>
             </ul>
           </section>
@@ -155,6 +161,14 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   >Repository (Code + Slides)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://pris.ly/prisma-data-proxy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Early access form for Prisma Data Proxy</a
                 >
               </li>
             </ul>
