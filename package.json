@@ -38,7 +38,7 @@
     "@aws-cdk/aws-rds": "1.132.0",
     "@aws-cdk/core": "1.132.0",
     "@prisma/client": "3.5.0",
-    "source-map-support": "0.5.20"
+    "source-map-support": "0.5.21"
   },
   "prettier": {
     "semi": false,
