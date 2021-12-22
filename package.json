@@ -13,11 +13,11 @@
     "slides": "serve -s slides"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.136.0",
+    "@aws-cdk/assert": "2.3.0",
     "@types/aws-lambda": "8.10.88",
     "@types/jest": "27.0.3",
     "@types/node": "16.11.7",
-    "aws-cdk": "1.136.0",
+    "aws-cdk": "2.3.0",
     "dotenv-cli": "4.1.0",
     "esbuild": "0.14.5",
     "husky": "7.0.4",
