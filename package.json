@@ -19,7 +19,7 @@
     "@types/node": "16.11.19",
     "aws-cdk": "1.136.0",
     "dotenv-cli": "4.1.0",
-    "esbuild": "0.14.5",
+    "esbuild": "0.14.11",
     "husky": "7.0.4",
     "jest": "27.4.5",
     "lint-staged": "12.1.2",
