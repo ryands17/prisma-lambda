@@ -16,7 +16,7 @@
     "@aws-cdk/assert": "1.139.0",
     "@types/aws-lambda": "8.10.92",
     "@types/jest": "27.4.0",
-    "@types/node": "16.11.20",
+    "@types/node": "16.11.25",
     "aws-cdk": "1.139.0",
     "dotenv-cli": "4.1.0",
     "esbuild": "0.14.11",
