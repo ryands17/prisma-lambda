@@ -24,7 +24,7 @@
     "jest": "27.5.1",
     "lint-staged": "12.4.1",
     "prettier": "2.6.2",
-    "prisma": "3.12.0",
+    "prisma": "3.14.0",
     "serve": "13.0.2",
     "ts-jest": "27.1.4",
     "ts-node": "10.7.0",
@@ -37,7 +37,7 @@
     "@aws-cdk/aws-logs": "1.156.1",
     "@aws-cdk/aws-rds": "1.156.1",
     "@aws-cdk/core": "1.156.1",
-    "@prisma/client": "3.12.0",
+    "@prisma/client": "3.14.0",
     "source-map-support": "0.5.20"
   },
   "prettier": {
