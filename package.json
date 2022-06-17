@@ -13,11 +13,11 @@
     "slides": "serve -s slides"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.156.1",
+    "@aws-cdk/assert": "1.160.0",
     "@types/aws-lambda": "8.10.100",
     "@types/jest": "27.5.2",
     "@types/node": "16.11.41",
-    "aws-cdk": "1.156.1",
+    "aws-cdk": "1.160.0",
     "dotenv-cli": "5.1.0",
     "esbuild": "0.14.45",
     "husky": "7.0.4",
@@ -31,12 +31,12 @@
     "typescript": "4.6.4"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "1.156.1",
-    "@aws-cdk/aws-ec2": "1.156.1",
-    "@aws-cdk/aws-lambda-nodejs": "1.156.1",
-    "@aws-cdk/aws-logs": "1.156.1",
-    "@aws-cdk/aws-rds": "1.156.1",
-    "@aws-cdk/core": "1.156.1",
+    "@aws-cdk/aws-apigateway": "1.160.0",
+    "@aws-cdk/aws-ec2": "1.160.0",
+    "@aws-cdk/aws-lambda-nodejs": "1.160.0",
+    "@aws-cdk/aws-logs": "1.160.0",
+    "@aws-cdk/aws-rds": "1.160.0",
+    "@aws-cdk/core": "1.160.0",
     "@prisma/client": "3.14.0",
     "source-map-support": "0.5.20"
   },
