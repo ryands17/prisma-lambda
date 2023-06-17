@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.198.1",
-    "@types/aws-lambda": "8.10.114",
+    "@types/aws-lambda": "8.10.119",
     "@types/jest": "27.5.2",
     "@types/node": "16.18.23",
     "aws-cdk": "1.198.1",
