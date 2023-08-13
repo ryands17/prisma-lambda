@@ -22,7 +22,7 @@
     "esbuild": "0.18.4",
     "husky": "7.0.4",
     "jest": "27.5.1",
-    "lint-staged": "12.5.0",
+    "lint-staged": "13.3.0",
     "prettier": "2.8.8",
     "prisma": "3.15.2",
     "serve": "13.0.4",
